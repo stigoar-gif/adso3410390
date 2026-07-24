@@ -4,3 +4,6 @@
 ### Analisis y Desarrollo de Software
 **Centro de Porcesos Industriales y de Construccion**
 > Sena Regional Caldas
+---
+1. Layout 
+2. JavaScript
