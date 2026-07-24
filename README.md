@@ -1,2 +1,6 @@
-# adso3410390
-Repository/ADSO3410390
+# ADSO 3410390
+![My picture](src/img/IMG.jpeg)
+## Stiven Gonzalez Arias
+### Analisis y Desarrollo de Software
+**Centro de Porcesos Industriales y de Construccion**
+> Sena Regional Caldas
