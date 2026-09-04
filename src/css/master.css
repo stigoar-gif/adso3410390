@@ -33,7 +33,7 @@ body {
     }
 
     &.mainmenu.layout {
-        background: linear-gradient(45deg, darkblue, black);
+        background: linear-gradient(45deg, grey, black);
         
         main {
             width: 380px;
@@ -56,7 +56,7 @@ body {
 
                 a:is(:link, :visited) {
                     span {
-                        background-color: darkblue;
+                        background-color: rgb(121, 6, 6);
                         
                     }
 
@@ -67,7 +67,7 @@ body {
                     }
 
                     &:is(:hover) {
-                        background-color: darkblue;
+                        background-color: black, grey;
                     }
                 }
             }
