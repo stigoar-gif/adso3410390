@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +8,31 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/master.css">
 </head>
-<body>
 
+<body>
+  <header class="header" id="navbar">
+    <div class="nav-container">
+      <div class="logo-text">RÁPIDOS Y FURIOSOS</div>
+
+      <!-- Botón con las 3 barras (spans) para la animación -->
+      <button id="mburger" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#inicio" class="nav-link active">INICIO</a></li>
+        <li><a href="#galeria" class="nav-link">GALERÍA</a></li>
+        <li><a href="#momentos" class="nav-link">MOMENTOS PRINCIPALES</a></li>
+        <li><a href="#sinopsis" class="nav-link">SINOPSIS</a></li>
+        <li><a href="#personajes" class="nav-link">PERSONAJES</a></li>
+        <li><a href="#informacion" class="nav-link">INFORMACIÓN</a></li>
+      </ul>
+      </ul>
+      </nav>
+    </div>
+  </header>
   <header class="header">
     <div class="nav-container">
       <div class="logo-text">RÁPIDOS Y FURIOSOS</div>
@@ -59,7 +82,9 @@
       <div>
         <h2 class="section-title">SINOPSIS</h2>
         <p class="synopsis-text">
-          La saga sigue la evolución de Brian O'Conner y Dominic Toretto, quienes pasan de ser rivales en las carreras callejeras clandestinas de Los Ángeles a formar una familia unida que realiza atracos globales e misiones internacionales de alto riesgo para detener a peligrosos terroristas.
+          La saga sigue la evolución de Brian O'Conner y Dominic Toretto, quienes pasan de ser rivales en las carreras
+          callejeras clandestinas de Los Ángeles a formar una familia unida que realiza atracos globales e misiones
+          internacionales de alto riesgo para detener a peligrosos terroristas.
         </p>
       </div>
 
@@ -74,22 +99,26 @@
 
         <div class="character-card">
           <img src="images/toretto.jpg" alt="Dominic Toretto">
-          <p>Líder de la familia y corredor callejero legendario. Se rige por un estricto código de lealtad y protección hacia los suyos.</p>
+          <p>Líder de la familia y corredor callejero legendario. Se rige por un estricto código de lealtad y protección
+            hacia los suyos.</p>
         </div>
 
         <div class="character-card">
           <img src="images/bryan.jpg" alt="Brian O'Conner">
-          <p>Exagente del FBI y policía encubierto que abandonó la ley tras entablar una profunda amistad y hermandad con Dominic Toretto.</p>
+          <p>Exagente del FBI y policía encubierto que abandonó la ley tras entablar una profunda amistad y hermandad
+            con Dominic Toretto.</p>
         </div>
 
         <div class="character-card">
           <img src="images/han.jpg" alt="Han Lue" class="han-img">
-          <p>Piloto experto, estratega e icono de la cultura del drifting en Tokio. Es reconocido por su temple tranquilo y lealtad incondicional.</p>
+          <p>Piloto experto, estratega e icono de la cultura del drifting en Tokio. Es reconocido por su temple
+            tranquilo y lealtad incondicional.</p>
         </div>
 
         <div class="character-card">
           <img src="images/roman.jpg" alt="Roman Pearce">
-          <p>Amigo de la infancia de Brian O'Conner. Es un piloto audaz, hablador y cómico que aporta carisma y humor al equipo en cada misión.</p>
+          <p>Amigo de la infancia de Brian O'Conner. Es un piloto audaz, hablador y cómico que aporta carisma y humor al
+            equipo en cada misión.</p>
         </div>
 
       </div>
@@ -118,4 +147,5 @@
 
   <script src="js/app.js"></script>
 </body>
+
 </html>

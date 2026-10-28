@@ -1,4 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Manejo del menú hamburguesa y desplegable
+  const mburger = document.getElementById('mburger');
+  const navMenu = document.getElementById('nav-menu') || document.querySelector('.options');
+
+  if (mburger) {
+    mburger.addEventListener('click', function () {
+      this.classList.toggle('active');
+      if (navMenu) {
+        navMenu.classList.toggle('show');
+      }
+    });
+  }
+
   const navLinks = document.querySelectorAll('.nav-link');
 
   navLinks.forEach(link => {
@@ -6,6 +19,14 @@ document.addEventListener('DOMContentLoaded', () => {
       navLinks.forEach(l => l.classList.remove('active'));
 
       link.classList.add('active');
+
+      
+      if (navMenu) {
+        navMenu.classList.remove('show');
+      }
+      if (mburger) {
+        mburger.classList.remove('active');
+      }
 
       const targetId = link.getAttribute('href');
       if (targetId && targetId.startsWith('#')) {
