@@ -516,4 +516,80 @@ body {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
+
+  /* =========================================
+   ESTILOS DEL CARRUSEL DE PERSONAJES
+   ========================================= */
+.carousel-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 40px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* Oculta la barra en Firefox */
+}
+
+.carousel::-webkit-scrollbar {
+    display: none; /* Oculta la barra en Chrome, Safari y Opera */
+}
+
+/* Adaptación de las tarjetas al carrusel */
+.carousel .card {
+    flex: 0 0 100%; 
+    scroll-snap-align: start;
+    box-sizing: border-box;
+}
+
+/* Responsividad del carrusel para diferentes pantallas */
+@media (min-width: 600px) {
+    .carousel .card {
+        flex: 0 0 calc((100% - 20px) / 2);
+    }
+}
+
+@media (min-width: 1024px) {
+    .carousel .card {
+        flex: 0 0 calc((100% - 60px) / 4);
+    }
+}
+
+/* Botones de navegación del carrusel */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #2c3e50;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.nav-btn:hover {
+    background: #1a252f;
+}
+
+.prev-btn { 
+    left: 0; 
+}
+
+.next-btn { 
+    right: 0; 
+}
 }

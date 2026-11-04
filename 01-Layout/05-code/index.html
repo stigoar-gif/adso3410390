@@ -10,6 +10,7 @@
 </head>
 
 <body>
+  
   <header class="header" id="navbar">
     <div class="nav-container">
       <div class="logo-text">RÁPIDOS Y FURIOSOS</div>
@@ -29,23 +30,6 @@
         <li><a href="#personajes" class="nav-link">PERSONAJES</a></li>
         <li><a href="#informacion" class="nav-link">INFORMACIÓN</a></li>
       </ul>
-      </ul>
-      </nav>
-    </div>
-  </header>
-  <header class="header">
-    <div class="nav-container">
-      <div class="logo-text">RÁPIDOS Y FURIOSOS</div>
-      <nav>
-        <ul class="nav-menu">
-          <li><a href="#inicio" class="nav-link active">INICIO</a></li>
-          <li><a href="#galeria" class="nav-link">GALERÍA</a></li>
-          <li><a href="#momentos" class="nav-link">MOMENTOS PRINCIPALES</a></li>
-          <li><a href="#sinopsis" class="nav-link">SINOPSIS</a></li>
-          <li><a href="#personajes" class="nav-link">PERSONAJES</a></li>
-          <li><a href="#informacion" class="nav-link">INFORMACIÓN</a></li>
-        </ul>
-      </nav>
     </div>
   </header>
 
@@ -93,34 +77,36 @@
       </div>
     </section>
 
+    <!-- SECCIÓN DE PERSONAJES ADAPTADA COMO CARRUSEL -->
     <section id="personajes" class="characters-section">
       <h2 class="section-title">PERSONAJES PRINCIPALES</h2>
-      <div class="characters-grid">
+      
+      <div class="carousel-container">
+        <button class="nav-btn prev-btn" id="prevBtn">&#10094;</button>
+        
+        <div class="carousel" id="carousel">
+          <div class="card character-card">
+            <img src="images/toretto.jpg" alt="Dominic Toretto">
+            <p>Líder de la familia y corredor callejero legendario. Se rige por un estricto código de lealtad y protección hacia los suyos.</p>
+          </div>
 
-        <div class="character-card">
-          <img src="images/toretto.jpg" alt="Dominic Toretto">
-          <p>Líder de la familia y corredor callejero legendario. Se rige por un estricto código de lealtad y protección
-            hacia los suyos.</p>
+          <div class="card character-card">
+            <img src="images/bryan.jpg" alt="Brian O'Conner">
+            <p>Exagente del FBI y policía encubierto que abandonó la ley tras entablar una profunda amistad y hermandad con Dominic Toretto.</p>
+          </div>
+
+          <div class="card character-card">
+            <img src="images/han.jpg" alt="Han Lue" class="han-img">
+            <p>Piloto experto, estratega e icono de la cultura del drifting en Tokio. Es reconocido por su temple tranquilo y lealtad incondicional.</p>
+          </div>
+
+          <div class="card character-card">
+            <img src="images/roman.jpg" alt="Roman Pearce">
+            <p>Amigo de la infancia de Brian O'Conner. Es un piloto audaz, hablador y cómico que aporta carisma y humor al equipo en cada misión.</p>
+          </div>
         </div>
 
-        <div class="character-card">
-          <img src="images/bryan.jpg" alt="Brian O'Conner">
-          <p>Exagente del FBI y policía encubierto que abandonó la ley tras entablar una profunda amistad y hermandad
-            con Dominic Toretto.</p>
-        </div>
-
-        <div class="character-card">
-          <img src="images/han.jpg" alt="Han Lue" class="han-img">
-          <p>Piloto experto, estratega e icono de la cultura del drifting en Tokio. Es reconocido por su temple
-            tranquilo y lealtad incondicional.</p>
-        </div>
-
-        <div class="character-card">
-          <img src="images/roman.jpg" alt="Roman Pearce">
-          <p>Amigo de la infancia de Brian O'Conner. Es un piloto audaz, hablador y cómico que aporta carisma y humor al
-            equipo en cada misión.</p>
-        </div>
-
+        <button class="nav-btn next-btn" id="nextBtn">&#10095;</button>
       </div>
     </section>
 

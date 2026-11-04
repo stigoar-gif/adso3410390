@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
       navLinks.forEach(l => l.classList.remove('active'));
 
       link.classList.add('active');
-
       
       if (navMenu) {
         navMenu.classList.remove('show');
@@ -61,6 +60,31 @@ document.addEventListener('DOMContentLoaded', () => {
   if (btnProductos) {
     btnProductos.addEventListener('click', () => {
       alert('Redirigiendo a la tienda de productos oficiales...');
+    });
+  }
+
+  // ==========================================
+  // NUEVA FUNCIONALIDAD: CARRUSEL DE PERSONAJES
+  // ==========================================
+  const carousel = document.getElementById('carousel');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  if (carousel && prevBtn && nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      const card = carousel.querySelector('.card');
+      if (card) {
+        const cardWidth = card.clientWidth;
+        carousel.scrollBy({ left: cardWidth + 20, behavior: 'smooth' });
+      }
+    });
+
+    prevBtn.addEventListener('click', () => {
+      const card = carousel.querySelector('.card');
+      if (card) {
+        const cardWidth = card.clientWidth;
+        carousel.scrollBy({ left: -(cardWidth + 20), behavior: 'smooth' });
+      }
     });
   }
 });
