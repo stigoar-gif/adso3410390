@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02-JavaScript</title>
+    <link rel="stylesheet" href="../../src/css/master.css">
+    <style>
+        body.mainmenu.javascript {
+            main {
+                max-width: 420px;
+
+                header {
+                    h1 {
+                        font-size: 2.6rem;
+                    }
+                }
+
+                section {
+                    border-radius: 14px;
+                    corner-shape: squircle;
+                    width: 380px;
+
+                    div.house {
+                        background: url(imgs/bg-steps.png) no-repeat center/ cover;
+                        border-radius: 14px;
+                        corner-shape: squircle;
+                        height: 700px;
+                        position: relative;
+
+                        div.info,
+                        div.controls,
+                        div#trainer {
+                            position: absolute;
+                        }
+
+                        div.info {
+                            background-color: #0009;
+                            border-radius: 14px;
+                            color: #fff;
+                            corner-shape: squircle;
+                            font-size: 1.6rem;
+                            left: 50%;
+                            padding: 0.8rem;
+                            text-align: center;
+                            top: 1rem;
+                            transform: translateX(-50%);
+                            width: 340px;
+                        }
+
+                        div.controls{
+                            display: flex;
+                            gap: 0.4rem;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            top: 8rem;
+
+                            button{
+                                border: none;
+                                background-color: #000c;
+                                color: #fff;
+                                font-size: 1.4rem;
+                                border-radius: 14px;
+                                corner-shape: squircle;
+                                height: 50px;
+                                width: 50px;
+                                transition: all 0.4s ease-in;
+
+                                &:hover{
+                                    cursor: pointer;
+                                    opacity: 1;
+                                    transform: scale(1.1);
+                                }
+                            }
+                        }
+
+                        div#trainer{
+                            background: url(imgs/steps-all.png) repeat-x;
+                            bottom: 4rem;
+                            height: 256px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            zoom: 0.8;
+                            width: 256px;
+
+                            animation: 0.5s animTrainer steps(4) infinite;
+
+                            &.down  {background-position-y:calc(256px * 0) ;}
+                            &.left  {background-position-y:calc(256px * -1) ;}
+                            &.right {background-position-y:calc(256px * -2) ;}
+                            &.up    {background-position-y:calc(256px * -3) ;}
+                            
+                        }
+                    }
+                }
+            }
+        }
+        @keyframes animTrainer{
+            100%{ background-position-x: -1024px ;}
+        }
+
+    </style>
+</head>
+
+<body class="mainmenu javascript">
+    <nav class="back"><a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                fill="#000000" viewBox="0 0 256 256">
+                <path
+                    d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z">
+                </path>
+            </svg></a></nav>
+
+    <main>
+        <header>
+            <h1>01-Events</h1>
+            <h3>user interactions with event listeners.</h3>
+        </header>
+        <section>
+            <div class="house">
+                <div class="info">Press arrow keys:</div>
+                <div class="controls">
+                    <button class="btn-left"> &larr;</button>
+                    <button class="btn-up"> &uarr;</button>
+                    <button class="btn-right">&rarr;</button>
+                    <button class="btn-down">&darr;</button>
+                </div>
+                <div id="trainer" class="down"></div>
+            </div>
+        </section>
+        </menu>
+    </main>
+    <script>
+        //ELEMENTS
+        const trainer = document.getElementById('trainer');
+        const btnLeft = document.querySelector('.btn-left'); 
+        const btnUp = document.querySelector('.btn-up'); 
+        const btnRight = document.querySelector('.btn-right'); 
+        const btnDown= document.querySelector('.btn-down');
+        
+        //EVENTS
+        btnLeft.addEventListener('click', function() {
+            trainer.className = 'left';
+        });
+        btnUp.addEventListener('click', function() {
+            trainer.className = 'up';
+        });
+        btnRight.addEventListener('click', function() {
+            trainer.className = 'right';
+        });
+        btnDown.addEventListener('click', function() {
+            trainer.className = 'down';
+        });
+
+        document.addEventListener('keyup', function(event){
+           //console.log(event.key)
+           //console.log(event.keyCode)
+
+           switch (event.keyCode) {
+            case 37://left
+            trainer.className = 'left'
+            break;
+        
+            case 38://up
+            trainer.className = 'up'
+            break;
+            
+            case 39://right
+            trainer.className = 'right'
+            break;
+            
+            case 40://down
+            trainer.className = 'down'
+            break;
+           }});
+    </script>
+</body>
+
+</html>
